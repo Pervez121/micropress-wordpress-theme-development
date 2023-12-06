@@ -38,7 +38,7 @@ section.landing-screen {
 }
 
 .landing-post-box {
-    height: 304px;
+    height: auto;
     width: 598px;
     padding: 40px;
     border-radius: 12px;
@@ -165,28 +165,110 @@ p.about {
 
 @media only screen and (min-width: 360px) and (max-width: 767px) {
     /* Your styles for small screens here */
+    section.landing-screen , .footer-main, .main-navigation , section.latest-post-grid{
+        width: 90%;
+        margin: auto;
+    }
+
+    .landing-post-box {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: auto;
+    }
+    nav.navbar.navbar-expand-lg.navbar-light.bg-white.container-fluid {
+        position: relative;
+        z-index: 2;
+        /* top: 100px; */
+    }
+    .website-logo img.custom-logo {
+        display: inline-block;
+        width: 150px;
+        height: calc(47px);
+    }
+    
+    .main-navigation {
+        height: auto;
+    }
+    
+    h2.title-of-post {
+        font-size: 22px;
+        line-height: normal;
+    }
+    
+    .landing-post-box {
+        padding: 20px;
+    }
+    
+    a.nav-link:hover {
+        border-bottom: solid gray 1px ;
+    }
+
+    .featured-post-box{
+        height: 250px;
+}
+
+section.landing-screen{
+    height: 550px;
+}
+
 }
 
 
 /* Medium Screens (768px - 991px): */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     /* Your styles for medium screens here */
+    section.landing-screen , .footer-main, .main-navigation , section.latest-post-grid{
+        width: 768px;
+        margin: auto;
+    }
+
+    .landing-post-box {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+    }
 }
 
 
 /* Large Screens (992px - 1199px): */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     /* Your styles for large screens here */
+    section.landing-screen , .footer-main, .main-navigation , section.latest-post-grid{
+        width: 992px;
+        margin: auto;
+    }
 }
+
 
 
 /* Extra Large Screens (1200px - 1439px): */
 @media only screen and (min-width: 1200px) and (max-width: 1439px) {
+    
     /* Your styles for extra-large screens here */
+
+
+    section.landing-screen , .footer-main, .main-navigation , section.latest-post-grid{
+        width: 1200px;
+        margin: auto;
+    }
+}
+.featured-post-box {
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-inner{
+    width: 90%;
+    margin: auto;
 }
 
 
 /* Very Large Screens (1440px and above): */
 @media only screen and (min-width: 1440px) {
+    section.landing-screen , .footer-main , .main-navigation{
+        width: 1420px;}
     /* Your styles for very large screens here */
 }

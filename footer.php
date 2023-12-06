@@ -17,10 +17,17 @@
         <div class="row">
 
     
-          <div class="col-6 col-md-2 col-lg-3 mb-3">
+          <div class="col-sm-12 col-md-3 col-lg-4 mb-3">
             <div class="nav-brand">
-                <a class="navbar-brand" href="#"><img src="./assets/images/micropress_logo.png" alt="" srcset=""
-                    width="250"></a>
+                <!-- <a class="navbar-brand" href="#"><img src="./assets/images/micropress_logo.png" alt="" srcset=""
+                    width="250"></a> -->
+                    <div class="custom-logo">
+                      <?php
+                      if(!empty(the_custom_logo())){
+                        the_custom_logo();
+                      }
+                      ?>
+                    </div>
                     <p class="about">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore aliquid nisi delectus eaque fugiat maiores?
                     </p>
@@ -30,7 +37,7 @@
                     </hl>
             </div>
           </div>
-          <div class="col-6 col-md-2 col-lg-3 mb-3">
+          <div class="col-sm-12 col-md-3 col-lg-3 mb-3">
             <h5>Quick Links</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
@@ -38,11 +45,11 @@
 
             </ul>
           </div>
-          <div class="col-6 col-md-2 col-lg-6 mb-3 mar-auto aligh-items-center">
+          <div class="ccol-sm-12 col-md-6 col-lg-5 mb-3 mar-auto aligh-items-center">
             <form>
               <h5>Subscribe to our newsletter</h5>
               <p>Monthly digest of what's new and exciting from us.</p>
-              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <div class="d-flex flex-column flex-sm-row  gap-2">
                 <label for="newsletter1" class="visually-hidden">Email address</label>
                 <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
                 <button class="btn btn-primary" type="button">Subscribe</button>
