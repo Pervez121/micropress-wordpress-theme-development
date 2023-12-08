@@ -50,9 +50,9 @@
               <h5>Subscribe to our newsletter</h5>
               <p>Monthly digest of what's new and exciting from us.</p>
               <div class="d-flex flex-column flex-sm-row  gap-2">
-                <label for="newsletter1" class="visually-hidden">Email address</label>
-                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                <button class="btn btn-primary" type="button">Subscribe</button>
+                <!-- <label for="newsletter1" class="visually-hidden">Email address</label> -->
+                <input id="newsletter1" type="text" class="form-control email-box" placeholder="Email address">
+                <button class="btn btn-dark" type="button" class="subscribe-btn">Subscribe</button>
               </div>
             </form>
           </div>
