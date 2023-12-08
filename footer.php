@@ -40,9 +40,9 @@
           <div class="col-sm-12 col-md-3 col-lg-3 mb-3">
             <h5>Quick Links</h5>
             <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">contact us</a></li>
-
+              <?php
+                  get_template_part('/template-parts/navigation')
+              ?>
             </ul>
           </div>
           <div class="ccol-sm-12 col-md-6 col-lg-5 mb-3 mar-auto aligh-items-center">

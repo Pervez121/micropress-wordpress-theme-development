@@ -8,6 +8,9 @@ Template Name: Home Template
  */
 
 get_header();
+include get_template_directory() . '/template-parts/latest_post_logic.php';   // gets the latest post
+//include get_template_directory() . '/posts-custom-query.php';   // gets the latest post
+
 ?>
 
 <main id="primary" class="site-main">
@@ -16,54 +19,31 @@ get_header();
         <div class="featured-post-box">
             <!-- <div class="featured-post-box" style="background-image: url(".{$GLOBALS[th]}.");" > -->
 
-            <?php
-// Assuming this code is within a WordPress theme file
+            <?php 
+        // Check if there's at least one post
+            if (isset($latest_post) && $latest_post) {          ?>
 
-// Get the latest post
-$latest_post = get_posts(array(
-    'numberposts' => 1, // Retrieve only one post
-    'orderby'     => 'post_date', // Order by post date
-    'order'       => 'DESC', // Order in descending order (latest first)
-));
-
-// Check if there's at least one post
-if ($latest_post) {
-    // Get the first (and only) post
-    $post = $latest_post[0];
-
-    // Get post-related data
-    $category = get_the_category($post->ID);
-    $title = get_the_title($post->ID);
-    $author_name = get_the_author_meta('display_name', $post->post_author);
-    $published_date = get_the_date('F j, Y', $post->ID);
-    $author_image = get_avatar($post->post_author); // Change the size as needed
-
-    // Output the data
-    
-    
-    
-   
-?>
-
-            <?php ?>
             <div class="landing-post-box">
                 <div class="latest-post">
-                    <div class="category-box"><span
-                            class="category"><?php echo "Category: " . $category[0]->name ; ?>y</span></div>
+                    <div class="category-box"><span class="category"><?php echo $category[0]->name ; ?></span></div>
                 </div>
                 <div class="post-title-box">
-                    <h2 class="title-of-post"><?php echo "Title: " . $title; ?></h2>
+                    <h2 class="title-of-post">
+                        <a href="<?php the_permalink() ?>" class="post-link heading-post-link">
+                            <?php echo $title; ?>
+                        </a>
+                    </h2>
                 </div>
                 <div class="data-of-post">
                     <span class="post-data author-of-post"><img
                             src="<?php echo esc_url(get_avatar_url($post->post_author, array('size' => 32))); ?>" alt=""
-                            class="author-image"></span><span
-                        class="post-data name-of-author"><?php echo "Author Name: " . $author_name ; ?></span><span
-                        class="post-data post-bublised-date"><?php  echo "Published Date: " . $published_date ; ?></span>
+                            class="author-image"><?php echo get_avatar(get_the_author_meta('ID'), 32); ?></span><span
+                        class="post-data name-of-author"><?php echo$author_name ; ?></span><span
+                        class="post-data post-bublised-date"><?php  echo $published_date ; ?></span>
                 </div>
             </div>
-            <?php
 
+            <?php
 } else {
     echo "No posts found.";
 }
@@ -86,26 +66,9 @@ if ($latest_post) {
         </div>
         <post class="container ">
             <div class="card-group row ">
-
-                <div class="card col-sm-0 col-md-6 col-lg-4 single-post-box">
-                    <img class="card-img-top post-image" src="./assets/images/post-images/post-image (1).png"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <div class="latest-post">
-                            <div class="category-box"><span class="category" id="post-category">Technology</span></div>
-                        </div>
-                        <div class="post-title-box " id="post title">
-                            <h2 class="title-of-post" id="post-content">The Impact of Technology on the Workplace: How
-                                Technology is Changing</h2>
-                        </div>
-                        <div class="data-of-post">
-                            <span class="post-data author-of-post"><img src="./assets/images/micropress favicon.png"
-                                    alt="" id="post-author-image" class="author-image"></span><span
-                                class="post-data name-of-author" id="post-author-name">Jason Francisco</span><span
-                                class="post-data post-bublised-date" id="post-published-date">August 20, 2022</span>
-                        </div>
-                    </div>
-                </div>
+                <?php  
+                get_template_part('/template-parts/posts_custom_query');
+                ?>
 
             </div>
         </post>

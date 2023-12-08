@@ -48,17 +48,9 @@
                         <!-- Navigation Items in the middle -->
                         <!-- this code fetches the menu items and add bootstrap classes to pringt a custom menu -->
                         <ul class="navbar-nav mx-auto">
-                            <?php
-                                
-                                $menu_items = wp_get_nav_menu_items('main-menu');
-                                foreach ($menu_items as $nav_items){
-                                    $nav_item_class = '';
-                                    if($nav_items->current){
-                                        $nav_item_class .= 'active'; 
-                                    }
-                                    echo '<li class="nav-item'. esc_attr($nav_item_class).'" ><a  class="nav-link"  href="'.$nav_items->url.'">'.$nav_items->title.'</a></li>';
-                                }
-                        ?>
+                        <?php
+                  get_template_part('/template-parts/navigation');
+                  ?>
                         </ul>
 
 
@@ -74,11 +66,6 @@
                             </div> -->
                             </div>
                         </form>
-
-                        <div class="custom-control custom-switch ml-3" id="theme-switch">
-                            <img src="<?php echo get_template_directory_uri( ) ?>./assets/images/Swich.png" alt=""
-                                class="theme-switch">
-                        </div>
                     </div>
                 </nav>
             </div>
