@@ -13,10 +13,16 @@ input.search_box {
     border-radius: 22px;
 }
 
-.theme-switch{
-
+input.search-field {
+    border: solid gray 1px;
+    border-radius: 32px;
+    font-size: 16px;
+    padding: 10px 10px;
 }
 
+input.search-submit {
+    display: none;
+}
 /* *******************************************************
 ***************landing screen style goes here*************
 ******************************************************* */
@@ -27,14 +33,14 @@ section.landing-screen {
     position: relative;
 }
 
-.featured-post-box{
+.featured-post-box {
     height: 600px;
-    background-image: url("https://source.unsplash.com/1380x600/?blog") ;
+    background-image: url("https://source.unsplash.com/1380x600/?blog");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 12px;
-    
+
 }
 
 .landing-post-box {
@@ -63,7 +69,7 @@ span.category {
     border-radius: 6px;
 }
 
-h2.title-of-post .heading-post-link{
+h2.title-of-post .heading-post-link {
     font-size: 36px;
     font-weight: 600;
     line-height: 40px;
@@ -71,6 +77,7 @@ h2.title-of-post .heading-post-link{
     margin: 24px 0px 24px 0px;
     margin-top: 16px;
 }
+
 .latest-post {
     margin-bottom: 16px;
 }
@@ -86,7 +93,8 @@ span.post-data.author-of-post {
     border-radius: 36px;
 }
 
-span.post-data.name-of-author, span.post-data.post-bublised-date{
+span.post-data.name-of-author,
+span.post-data.post-bublised-date {
     font-family: sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -96,7 +104,8 @@ span.post-data.name-of-author, span.post-data.post-bublised-date{
 }
 
 span.post-data.post-bublised-date {
-margin-left: 16px;}
+    margin-left: 16px;
+}
 
 /* post grid section styling */
 
@@ -106,7 +115,8 @@ section.latest-post-grid {
     margin: auto;
 }
 
-h3.post-grid-title, .post-link {
+h3.post-grid-title,
+.post-link {
     font-size: 24px;
     line-height: 36px;
     color: black;
@@ -133,7 +143,7 @@ h2#post-content {
 
 .home-posts-grid {
     flex: 1 0 auto !important;
-   
+
 }
 
 .post-thumhnail-box {
@@ -144,6 +154,7 @@ h2#post-content {
     background-repeat: no-repeat;
     background: right;
 }
+
 .single-post-box.home-posts-grid.my-3 {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     width: 330px;
@@ -160,16 +171,16 @@ span.post-data.author-of-post {
     z-index: 2;
     display: inline-block;
 }
-span.post-data.author-of-post > img{
 
-position: absolute;
+span.post-data.author-of-post>img {
+
+    position: absolute;
     z-index: 1;
     width: 100%;
     height: 100%
-
 }
 
-a.post-link:hover{
+a.post-link:hover {
     color: black;
     text-decoration: none
 }
@@ -183,6 +194,7 @@ a.post-link:hover{
     align-items: center;
     justify-content: start;
 }
+
 .card-body.post-data {
     display: flex;
     flex-direction: column;
@@ -197,7 +209,7 @@ a.post-link:hover{
 
 /* footer styling goes here */
 
-    .footer-main {
+.footer-main {
     width: 1420px;
     margin: auto;
     padding-top: 46px;
@@ -213,7 +225,8 @@ img.social {
     margin: 5px;
 }
 
-li.email, li.phone {
+li.email,
+li.phone {
     list-style-type: none;
 }
 
@@ -231,8 +244,16 @@ input#newsletter1 {
 }
 
 
+
+/* 404 pages css */
+
+.page-content {text-align: center;}
+
+.page-content >  img{height: 600px;}
+
+
 /* slider css */
-.ourworks-box{
+/* .ourworks-box{
 	width: 60%;
 	justify-content: center;
 	text-align: center;
@@ -308,7 +329,7 @@ input#newsletter1 {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
-}
+} */
 
 
 
@@ -317,10 +338,71 @@ input#newsletter1 {
 ***************Responsive css goes here ************************
 **************************************************************** */
 
+/* single post page styling */
+.content-container {
+    width: 800px;
+    text-align: -webkit-left;
+}
+
+.main-container {
+    text-align: -webkit-center;
+    padding: 32px 0px;
+}
+
+.post-thumbnail>img {
+    width: 100%;
+    height: auto;
+
+}
+
+span.category {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span.category>ul,
+li,
+a {
+    list-style-type: none;
+    color: white;
+    margin: 0px;
+    text-align: center;
+    padding: 0px;
+}
+
+h2.title-of-post.single-post-title {
+    margin: 16px 0px 20px 0px;
+}
+
+.single-post-title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 40px;
+    font-family: sans-serif;
+}
+
+.post-thumbnail {
+    margin: 32px 0px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.single-post-content>p {
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
 
 @media only screen and (min-width: 360px) and (max-width: 767px) {
+
     /* Your styles for small screens here */
-    section.landing-screen , .footer-main, .main-navigation , section.latest-post-grid{
+    section.landing-screen,
+    .footer-main,
+    .main-navigation,
+    section.latest-post-grid {
         width: 90%;
         margin: auto;
     }
@@ -331,49 +413,56 @@ input#newsletter1 {
         width: 80%;
         height: auto;
     }
+
     nav.navbar.navbar-expand-lg.navbar-light.bg-white.container-fluid {
         position: relative;
         z-index: 2;
         /* top: 100px; */
     }
+
     .website-logo img.custom-logo {
         display: inline-block;
         width: 150px;
         height: calc(47px);
     }
-    
+
     .main-navigation {
         height: auto;
     }
-    
+
     h2.title-of-post {
         font-size: 22px;
         line-height: normal;
     }
-    
+
     .landing-post-box {
         padding: 20px;
     }
-    
+
     a.nav-link:hover {
-        border-bottom: solid gray 1px ;
+        border-bottom: solid gray 1px;
     }
 
-    .featured-post-box{
+    .featured-post-box {
         height: 250px;
-}
+    }
 
-section.landing-screen{
-    height: 550px;
-}
+    section.landing-screen {
+        height: 550px;
+    }
 
-img.advertise {
-    width: 80%;
-}
+    img.advertise,
+    .content-container {
+        width: 80%;
+    }
 
-.advertisement {
-    text-align: center;
-}
+    .advertisement {
+        text-align: center;
+    }
+
+    .post-thumbnail {
+        height: auto;
+    }
 
 }
 
@@ -381,8 +470,12 @@ img.advertise {
 
 /* Medium Screens (768px - 991px): */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
     /* Your styles for medium screens here */
-    section.landing-screen , .footer-main, .main-navigation , section.latest-post-grid{
+    section.landing-screen,
+    .footer-main,
+    .main-navigation,
+    section.latest-post-grid {
         width: 768px;
         margin: auto;
     }
@@ -396,9 +489,13 @@ img.advertise {
     img.advertise {
         width: 80%;
     }
-    
+
     .advertisement {
         text-align: center;
+    }
+
+    .content-container {
+        width: 600px;
     }
 
 }
@@ -406,8 +503,12 @@ img.advertise {
 
 /* Large Screens (992px - 1199px): */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+
     /* Your styles for large screens here */
-    section.landing-screen , .footer-main, .main-navigation , section.latest-post-grid{
+    section.landing-screen,
+    .footer-main,
+    .main-navigation,
+    section.latest-post-grid {
         width: 992px;
         margin: auto;
     }
@@ -422,15 +523,19 @@ img.advertise {
 
 /* Extra Large Screens (1200px - 1439px): */
 @media only screen and (min-width: 1200px) and (max-width: 1439px) {
-    
+
     /* Your styles for extra-large screens here */
 
 
-    section.landing-screen , .footer-main, .main-navigation , section.latest-post-grid{
+    section.landing-screen,
+    .footer-main,
+    .main-navigation,
+    section.latest-post-grid {
         width: 1200px;
         margin: auto;
     }
 }
+
 .featured-post-box {
     margin: 0px 20px;
     display: flex;
@@ -438,7 +543,7 @@ img.advertise {
     align-items: center;
 }
 
-.footer-inner{
+.footer-inner {
     width: 90%;
     margin: auto;
 }
@@ -446,7 +551,12 @@ img.advertise {
 
 /* Very Large Screens (1440px and above): */
 @media only screen and (min-width: 1440px) {
-    section.landing-screen , .footer-main , .main-navigation{
-        width: 1420px;}
+
+    section.landing-screen,
+    .footer-main,
+    .main-navigation {
+        width: 1420px;
+    }
+
     /* Your styles for very large screens here */
 }

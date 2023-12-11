@@ -59,8 +59,11 @@
 
                         <form class="form-inline my-2 my-lg-0">
                             <div class="input-group">
-                                <input type="text" class="search_box form-control rounded-pill mr-sm-2"
-                                    placeholder="Search" aria-label="Search">
+                                <!-- <input type="text" class="search_box form-control rounded-pill mr-sm-2"
+                                    placeholder="Search" aria-label="Search"> -->
+                                    <?php
+                                        get_search_form()
+                                    ?>
                                 <!-- <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon2">🔍</span>
                             </div> -->
