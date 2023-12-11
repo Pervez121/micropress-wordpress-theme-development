@@ -16,7 +16,7 @@ include get_template_directory() . '/template-parts/latest_post_logic.php';   //
 <main id="primary" class="site-main">
 
     <section class="landing-screen">
-        <div class="featured-post-box">
+        <div class="featured-post-box" style="background-image: url('<?php echo $thumbnail?>')">
             <!-- <div class="featured-post-box" style="background-image: url(".{$GLOBALS[th]}.");" > -->
 
             <?php 

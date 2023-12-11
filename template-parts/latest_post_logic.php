@@ -11,6 +11,7 @@ $latest_post = get_posts(array(
 // Check if there's at least one post
 if ($latest_post) {
     $post = $latest_post[0];
+    $thumbnail = get_the_post_thumbnail_url($post->ID);
     $category = get_the_category($post->ID);
     $title = get_the_title($post->ID);
     $author_name = get_the_author_meta('display_name', $post->post_author);

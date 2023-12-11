@@ -43,5 +43,26 @@ Template Name: Single post Template
                 endif;
                 ?>
         </div>
+        <hr class="devider">
+        <div class="share-box container">
+            <div class="row">
+                <div class="col-sm-12 col-md-3 col-lg-3 share-box">Share: </div>
+                <div class="col-sm-12 col-md-9 col-lg-9 share-box">
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3 social-list"><a class="link-body-emphasis" href="#"><img
+                                    src="<?php echo get_template_directory_uri(  )?>/assets/images/facebook.png" alt=""
+                                    class="social"></a> Facebook </li>
+                        <li class="ms-3 social-list"><a class="link-body-emphasis" href="#"><img
+                                    src="<?php echo get_template_directory_uri(  )?>/assets/images/insta.png" alt=""
+                                    class="social"></a> Instagram </li>
+                        <li class="ms-3 social-list"><a class="link-body-emphasis"
+                                href="https://www.linkedin.com/in/pervez-iqbal-pi/"><img
+                                    src="<?php echo get_template_directory_uri(  )?>/assets/images/linlkden.png" alt=""
+                                    class="social"></a> Linkedin </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>

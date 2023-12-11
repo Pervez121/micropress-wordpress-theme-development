@@ -35,7 +35,7 @@ section.landing-screen {
 
 .featured-post-box {
     height: 600px;
-    background-image: url("https://source.unsplash.com/1380x600/?blog");
+    /* background-image: url("https://source.unsplash.com/1380x600/?blog"); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -331,13 +331,6 @@ input#newsletter1 {
 	background-size: contain;
 } */
 
-
-
-
-/* ****************************************************************
-***************Responsive css goes here ************************
-**************************************************************** */
-
 /* single post page styling */
 .content-container {
     width: 800px;
@@ -394,6 +387,34 @@ h2.title-of-post.single-post-title {
     font-size: 20px;
     font-weight: 400;
 }
+hr.devider {
+    margin: 50px 0px 25px 0px;
+}
+
+.share-box {
+    align-self: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.share-box ul {
+    margin: auto;
+}
+
+.share-box ul li {
+    color: #333333;
+    border: solid 1px #333333;
+    border-radius: 5px;
+    padding: 0px 6px;
+    margin: 0px 6px;
+
+}
+
+
+/* ****************************************************************
+***************Responsive css goes here ************************
+**************************************************************** */
+
 
 
 @media only screen and (min-width: 360px) and (max-width: 767px) {
