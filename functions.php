@@ -132,6 +132,15 @@ function micropress_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	register_sidebar( array(
+		'name'          => __( 'Secondary Sidebar', 'micropress' ),
+		'id'            => 'sidebar-2',
+		'before_widget' => '<ul><li id="%1$s" class="widget %2$s sidebar2-box">',
+		'after_widget'  => '</li></ul>',
+		'before_title'  => '<h3 class="widget-title sidebar2-title">',
+		'after_title'   => '</h3>',
+	) );
+
 }
 add_action( 'widgets_init', 'micropress_widgets_init' );
 

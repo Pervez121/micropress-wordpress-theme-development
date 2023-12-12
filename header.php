@@ -16,7 +16,7 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="<?php echo get_template_directory_uri()?>/assets/images/micropress.ico" type="image/x-icon">
+    <!-- <link rel="icon" href="<?php echo get_template_directory_uri()?>/assets/images/micropress.ico" type="image/x-icon"> -->
     <?php wp_head(); ?>
 </head>
 
@@ -32,7 +32,7 @@
                     <!-- <a class="navbar-brand" href="#"><img src="./assets/images/micropress_logo.png" alt="" srcset=""
                         width="150"></a> -->
                     <div class="website-logo">
-                        <?php the_custom_logo( ) ?>
+                      <?php the_custom_logo( ) ?>
                     </div>
                     <!-- Toggler/collapsibe Button for small screens -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"

@@ -23,6 +23,11 @@ input.search-field {
 input.search-submit {
     display: none;
 }
+
+.menu-nav-links {
+    text-align: left;
+    color: #343a40;
+}
 /* *******************************************************
 ***************landing screen style goes here*************
 ******************************************************* */
@@ -335,6 +340,8 @@ input#newsletter1 {
 .content-container {
     width: 800px;
     text-align: -webkit-left;
+    
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
 .main-container {
@@ -348,15 +355,15 @@ input#newsletter1 {
 
 }
 
-span.category {
+.single-post-page-category {
     display: inline-flex;
     justify-content: center;
     align-items: center;
 }
 
-span.category>ul,
-li,
-a {
+.single-post-page-category > .post-categories,
+li, .post-categories  a
+ {
     list-style-type: none;
     color: white;
     margin: 0px;
@@ -485,6 +492,11 @@ hr.devider {
         height: auto;
     }
 
+    .custom-logo {
+        width: auto;
+        height: auto;
+        margin: 5px 0px;
+    }
 }
 
 
@@ -519,6 +531,11 @@ hr.devider {
         width: 600px;
     }
 
+    .custom-logo {
+        width: 100%;
+        height: auto;
+        margin: 5px 0px;
+    }
 }
 
 

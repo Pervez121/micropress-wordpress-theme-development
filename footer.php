@@ -31,10 +31,6 @@
                     <p class="about">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore aliquid nisi delectus eaque fugiat maiores?
                     </p>
-                    <hl class="contact-info">
-                        <li class="email"><span class="email-title"><b>Email: </b></span>mail@micropress.com</li>
-                        <li class="phone"><span class="phone-title"><b>Phone: </b> </span>+92-316-9201238</li>
-                    </hl>
             </div>
           </div>
           <div class="col-sm-12 col-md-3 col-lg-3 mb-3">

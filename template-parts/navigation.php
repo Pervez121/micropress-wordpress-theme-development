@@ -1,4 +1,3 @@
-
 <?php
 
 /*
@@ -11,6 +10,6 @@ Template Name: navigation
                                     if($nav_items->current){
                                         $nav_item_class .= 'active'; 
                                     }
-                                    echo '<li class="nav-item'. esc_attr($nav_item_class).'" ><a  class="nav-link"  href="'.$nav_items->url.'">'.$nav_items->title.'</a></li>';
+                                    echo '<li class="nav-item'. esc_attr($nav_item_class).'" ><a  class="nav-link menu-nav-links"  href="'.$nav_items->url.'">'.$nav_items->title.'</a></li>';
                                 }
                         ?>

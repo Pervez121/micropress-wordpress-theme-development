@@ -18,6 +18,8 @@ $query = new WP_Query($args);
 if ($query->have_posts()) :
     while ($query->have_posts()) :
         $query->the_post();
+
+
 ?>
 
 <div class="card col-xs-12 col-sm-12 col-md-6 col-lg-4 single-post-box home-posts-grid  my-3 ">
@@ -61,6 +63,9 @@ if ($query->have_posts()) :
 
 <?php
     endwhile;
+    ?>
+
+<?php
 else :
     echo 'No posts found';
 endif;
