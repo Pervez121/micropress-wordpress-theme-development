@@ -180,12 +180,17 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 
-// function micropress_theme_scripts(){
-// wp_enqueue_style( 'style', get_template_directory_uri( ).'/assets/css/style.css', array() ,  '1.0.0' );
-// echo "hello";
 
+// function micropress_pagination(){
 
+// 	$args = array(
+//         'post_type' => 'post',
+//     );
+// 	$all_posts = new WP_Query( $args );
+
+//     echo '<div class="pagination">';
+//     previous_post_link($args, '&laquo; Previous Post');
+//     next_post_link($args, 'Next Post &raquo;');
+//     echo '</div>';
 
 // }
-
-// add_action( 'wp_enqueue_scripts', 'micropress_theme_scripts' );
