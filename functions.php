@@ -19,6 +19,7 @@ if ( ! defined( '_S_VERSION' ) ) {
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
+require 'customizer.php';
 function micropress_setup() {
 	/*
 		* Make theme available for translation.
