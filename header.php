@@ -18,6 +18,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="icon" href="<?php echo get_template_directory_uri()?>/assets/images/micropress.ico" type="image/x-icon"> -->
     <?php wp_head(); ?>
+    <style type="text/css">
+        .menu-nav-links{
+            font-family: <?php echo  get_theme_mod( 'micropress_menu_font_family', 'sans-serif' ) ?> ;
+            font-size: <?php echo  get_theme_mod( 'micropress_menu_font_size', '16px' ) ?> ;
+            font-weight:<?php echo  get_theme_mod( 'micropress_menu_font_weight', '400px' ) ?> ;
+            color: <?php  echo  get_theme_mod( 'micropress_menu_font_color', '#000000' ) ?> !important; 
+        }
+    </style>
 </head>
 
 <body <?php body_class(); ?>>
