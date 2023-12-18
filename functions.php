@@ -180,7 +180,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 
+// include custom guest posts
 
+
+require get_template_directory( ).'/inc/guest-posts.php' ;
 
 // function micropress_pagination(){
 

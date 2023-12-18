@@ -1,7 +1,8 @@
 <?php
 // Template Name: Micropress customizer template
 // Description: this template is for adding options to customizer
-
+require_once ABSPATH . 'wp-admin/includes/template.php';
+require_once ABSPATH . 'wp-admin/includes/theme.php';
 
 ?>
 
@@ -11,15 +12,15 @@
 function theme_menu_customize_register( $wp_customize ) {
     // Do stuff with $wp_customize, the WP_Customize_Manager object.
 
-    $wp_customize->add_panel('micropress_menu_setting', array(
-        'title'  => 'Customize Menu Items',
+    $wp_customize->add_panel('micropress_theme_options', array(
+        'title'  => 'Customize Theme options',
         'description' => 'This option lets you customize font and color of menu items',
         'priority' => 10,
     ));
 
     $wp_customize->add_section('customize_micropress_menu_font', array(
         'title'  => 'Menu Font Setting',
-        'panel' => 'micropress_menu_setting', // Corrected 'Panel' to 'panel'
+        'panel' => 'micropress_theme_options', // 'panel'
     ));
 
     // $wp_customize->add_setting('micropress_menu_font_family', array(
@@ -95,6 +96,46 @@ function theme_menu_customize_register( $wp_customize ) {
         //'settings' => 'micropress_menu_font_color',
         'type'     => 'color',
     ));
+
+    // theme option for landing page post
+
+    $wp_customize->add_section('landing_page_post', array(
+        'title'  => 'Select landing page post',
+        'panel' => 'micropress_theme_options', // 'panel'
+    ));
+
+    $wp_customize->add_setting('micropress_landing_page_post', array(
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'default'           => '',
+        'transport'         => 'refresh', // or 'postMessage' for live preview
+        'sanitize_callback' => 'esc_attr',
+    ));
+        // Custom function to retrieve all posts
+   function micropress_get_all_posts() {
+    $posts = get_posts(array(
+        'post_type'      => 'post', // Change to your custom post type if needed
+        'posts_per_page' => -1,     // Retrieve all posts
+    ));
+
+    $post_choices = array();
+    foreach ($posts as $post) {
+        $post_choices[$post->ID] = $post->post_title;
+    }
+
+    return $post_choices;
+    
+}
+
+    $wp_customize->add_control('micropress_landing_page_post', array(
+        'label'    => __('Landing page post'),
+        'section'  => 'landing_page_post',
+        //'settings' => 'micropress_menu_font_color',
+        'type'     => 'select',
+        'choices'  => micropress_get_all_posts(), // Custom function to get all posts
+        'settings' => 'micropress_landing_page_post', // Set the setting for the selected post
+    ));
+    
 }
 add_action( 'customize_register', 'theme_menu_customize_register' );
 

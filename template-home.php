@@ -89,7 +89,23 @@ include get_template_directory() . '/template-parts/latest_post_logic.php';   //
             </div>
         </post>
     </section>
+    <section class="container guest-post-carousal">
+        <div class="section-title">
+            <h3 class="post-grid-title">Guest Post</h3>
+        </div>
+        <div class="carousal_box">
+            <div class="owl-carousel">
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+            </div>
+        </div>
 
+    </section>
     <section class="advertisement-box m-4 pb-4 d-flex align-items-center justify-content-center">
         <div class="advertisement">
             <img src="<?php echo get_template_directory_uri()?>./assets/images/o-ads-space.png" alt=""
