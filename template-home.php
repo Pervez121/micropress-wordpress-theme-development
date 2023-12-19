@@ -94,15 +94,14 @@ include get_template_directory() . '/template-parts/latest_post_logic.php';   //
             <h3 class="post-grid-title">Guest Post</h3>
         </div>
         <div class="carousal_box">
-            <div class="owl-carousel">
-                <div> Your Content </div>
-                <div> Your Content </div>
-                <div> Your Content </div>
-                <div> Your Content </div>
-                <div> Your Content </div>
-                <div> Your Content </div>
-                <div> Your Content </div>
-            </div>
+   <div>
+   <?php
+
+get_template_part('/template-parts/post_carousal');
+
+?>
+   </div>
+
         </div>
 
     </section>

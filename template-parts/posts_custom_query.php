@@ -8,6 +8,7 @@ Template Name: Post Custom Query
 
 <?php
 $args = array(
+    'post_type'  => 'guest-post',
     'posts_per_page' => 9,
     // 'post_type'  => 'guest-posts'   // for custom posts 
     'orderby' => 'date',
