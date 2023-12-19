@@ -1,14 +1,22 @@
-jQuery(document).ready(function(){
-    jQuery(".owl-carousel").owlCarousel({
+// jQuery(document).ready(function(){
+//     jQuery(".owl-carousel").owlCarousel({
 
-      loop:true,
-      margin:10,
-      nav:true,
-      items:1,
-      center:true
-    }
-    );
-  });
+//       loop:true,
+//       margin:10,
+//       nav:true,
+//       items:1,
+//       center:true,
+//     }
+//     );
+//   });
+
+  jQuery(document).ready(function($) {
+    $('.owl-carousel').owlCarousel({
+      items: 1,
+      loop: true,
+        // other settings...
+    });
+});
 
   // jQuery('.owl-carousel').owlCarousel({
   //   loop:true,

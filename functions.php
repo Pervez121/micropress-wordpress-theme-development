@@ -184,6 +184,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 require get_template_directory( ).'/inc/guest-posts.php' ;
+include get_template_directory( ).'/inc/guest-post-meta-box.php';
 
 // function micropress_pagination(){
 

@@ -8,7 +8,7 @@ Template Name: Post Custom Query
 
 <?php
 $args = array(
-    'post_type'  => 'guest-post',
+    // 'post_type'  => 'guest-post',
     'posts_per_page' => 9,
     // 'post_type'  => 'guest-posts'   // for custom posts 
     'orderby' => 'date',
@@ -25,8 +25,8 @@ if ($query->have_posts()) :
 ?>
 
 <div class="card col-xs-12 col-sm-12 col-md-6 col-lg-4 single-post-box home-posts-grid  my-3 ">
-    <a href="<?php the_permalink(); ?>" class="post-thumhnail-box" 
-    style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url(null, 'medium')); ?>');">
+    <a href="<?php the_permalink(); ?>" class="post-thumhnail-box"
+        style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url(null, 'medium')); ?>');">
     </a>
     <div class="card-body post-data">
         <?php
@@ -40,25 +40,24 @@ if ($query->have_posts()) :
         </div>
         <?php endif; ?>
         <div class="post-title-box " id="post-title">
-            
+
             <h2 class="title-of-post" id="post-content">
-            <a class="post-link"  href="<?php the_permalink() ?>">
-                <?php the_title(); ?>
+                <a class="post-link" href="<?php the_permalink() ?>">
+                    <?php the_title(); ?>
                 </a>
             </h2>
-            
+
         </div>
         <div class="data-of-post">
             <span class="post-data author-of-post">
-            <!-- K<img src="" alt="" id="post-author-image" class="author-image"> -->
-          
-            <?php echo get_avatar(get_the_author_meta('ID'), 32); ?>
-            
+                <!-- K<img src="" alt="" id="post-author-image" class="author-image"> -->
+
+                <?php echo get_avatar(get_the_author_meta('ID'), 32); ?>
+
             </span>
-                    
-            <span class="post-data name-of-author"
-                id="post-author-name"> <?php the_author(); ?></span><span class="post-data post-bublised-date"
-                id="post-published-date"><?php the_date(); ?></span>
+
+            <span class="post-data name-of-author" id="post-author-name"> <?php the_author(); ?></span><span
+                class="post-data post-bublised-date" id="post-published-date"><?php the_date(); ?></span>
         </div>
     </div>
 </div>

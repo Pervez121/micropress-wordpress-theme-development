@@ -61,20 +61,6 @@ include get_template_directory() . '/template-parts/latest_post_logic.php';   //
         </div>
     </section>
 
-    <!-- <section class="pt-5 circle-1">
-
-        <div class="ourworks-box container pb-5 pt-5">
-            <h1 class="our-works-head">Our Clients say</h1>
-            <p>Check out what clients say about my services. Happy clients all over the world. Share your experience
-                with me by submitting your reviews</p>
-        </div>
-      // carousal template
-        <?php 
-            //    get_template_part('/template-parts/slider-template')
-                ?>
-        </div>
-
-    </section> -->
 
     <section class="latest-post-grid ">
         <div class="section-title">
@@ -88,23 +74,18 @@ include get_template_directory() . '/template-parts/latest_post_logic.php';   //
 
             </div>
         </post>
-    </section>
-    <section class="container guest-post-carousal">
+    </section> 
+
+     <section class="container guest-post-carousal">
         <div class="section-title">
             <h3 class="post-grid-title">Guest Post</h3>
         </div>
-        <div class="carousal_box">
-   <div>
-   <?php
+         <div class="owl-carousel">
+            <?php get_template_part('/template-parts/post_carousal'); ?>
+         </div>
+        
+    </section> 
 
-get_template_part('/template-parts/post_carousal');
-
-?>
-   </div>
-
-        </div>
-
-    </section>
     <section class="advertisement-box m-4 pb-4 d-flex align-items-center justify-content-center">
         <div class="advertisement">
             <img src="<?php echo get_template_directory_uri()?>./assets/images/o-ads-space.png" alt=""
